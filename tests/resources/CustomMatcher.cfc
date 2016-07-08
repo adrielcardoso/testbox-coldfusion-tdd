@@ -10,14 +10,26 @@ component{
 			return true;
 	}
 
-	function toBeLuisMajano( expectation ){
-		var results = ( expectation.actual == "Luis Majano" ? true : false ); 		
+	function toBeLuisMajano( expectation, validation){
+
+		var results = ( expectation.actual == validation[1] ? true : false ); 		
 
 		if( expectation.isNot )
 			return !results;
 		else
 			return results;
 			
+	}
+
+	function testFunction(expectation){
+
+		var results = ( expectation.actual == "Hola Amigo!" ? true : false ); 		
+
+		if( expectation.isNot )
+			return !results;
+		else
+			return results;
+
 	}
 
 }
